@@ -1,0 +1,12 @@
+@use "framework.css";
+@use "sass:math";
+
+.swatches {
+  @for $i from 0 to 100 {
+    --color-sample-#{$i}: hsl(#{$i*math.div(360,100)}, 100%, 50%);
+   }
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-gap: 10px;
+   grid-auto-rows: minmax(100px, auto);
+}
