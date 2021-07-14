@@ -115,6 +115,35 @@
   grid-auto-rows: minmax(100px, auto);
 }
 
+#cart ul {
+  padding: 0;
+}
+
+#cart li {
+  list-style: none;
+  padding: 4px;
+  margin: 4px 0;
+}
+
+#cart li:nth-child(odd) {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
+#cart li:nth-child(even) {
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+}
+
+#cart li > span {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#cart li > span:nth-child(2) > button {
+  margin: 2px;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-fg);
